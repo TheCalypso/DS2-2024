@@ -20,6 +20,7 @@ public class ActivityConsigne extends Activity {
 
     private void finishWithResult(String humidityValue) {
         Intent resultIntent = new Intent();
+        if (Integer.parseInt(humidityValue) > 100) humidityValue = "100";
         resultIntent.putExtra("humidity_value", humidityValue);
         setResult(Activity.RESULT_OK, resultIntent);
         finish();
