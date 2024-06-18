@@ -6,14 +6,12 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- Title -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Régulation hygrométrique"
-        android:layout_marginTop="50dp"
+        android:text="@string/regulation_hygrometrique"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="24dp"/>
@@ -28,21 +26,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pièce : "
+            android:text="@string/piece"
             android:textSize="18sp"/>
 
         <Spinner
             android:id="@+id/spinnerRoom"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:entries="@array/room_array"/>
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AJOUTER"
+            android:text="@string/ajouter"
             android:backgroundTint="@color/purple_500"
             android:textColor="@android:color/white"/>
     </LinearLayout>
@@ -51,7 +48,7 @@
         android:id="@+id/btnSetParam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Définir paramètre"
+        android:text="@string/definir_parametre"
         android:backgroundTint="@color/purple_500"
         android:textColor="@android:color/white"
         android:layout_below="@id/linearLayout"
@@ -62,7 +59,7 @@
         android:id="@+id/tConsigne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Consigne :"
+        android:text="@string/consigne"
         android:textSize="18sp"
         android:layout_below="@id/btnSetParam"
         android:layout_alignParentStart="true"
@@ -77,17 +74,17 @@
         android:layout_marginTop="16dp"
         android:orientation="horizontal">
 
-        <!-- ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_drop"
-            android:layout_marginRight="8dp"/-->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/humidity48"
+            android:layout_marginRight="8dp"/>
 
         <TextView
             android:id="@+id/tvConsigne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="45.0"
+            android:text="@string/consigne_defaut"
             android:textSize="24sp"
             android:textColor="@android:color/holo_blue_dark"/>
     </LinearLayout>
@@ -96,7 +93,7 @@
         android:id="@+id/btnSetHumidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Envoyé"
+        android:text="@string/envoye"
         android:backgroundTint="@color/purple_500"
         android:textColor="@android:color/white"
         android:layout_below="@id/linearLayout2"

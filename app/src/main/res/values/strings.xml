@@ -1,9 +1,10 @@
 <resources>
-    <string-array name="room_array">
-        <item>Séjour</item>
-        <item>Chambre</item>
-        <item>Salon</item>
-        <item>Cuisine</item>
-    </string-array>
     <string name="app_name">DS2-2024</string>
+    <string name="regulation_hygrometrique">Régulation hygrométrique</string>
+    <string name="piece">Pièce :</string>
+    <string name="ajouter">AJOUTER</string>
+    <string name="definir_parametre">Définir paramètre</string>
+    <string name="consigne">Consigne :</string>
+    <string name="consigne_defaut">45.0</string>
+    <string name="envoye">Envoyé</string>
 </resources>

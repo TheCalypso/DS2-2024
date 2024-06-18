@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -30,11 +29,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initializeViews();
+        initializeData();
+        setSpinnerListener();
+        setButtonListeners();
+    }
+
+    private void initializeViews() {
         spinnerPiece = findViewById(R.id.spinnerRoom);
         tvConsigne = findViewById(R.id.tvConsigne);
-        Button btnAddRoom = findViewById(R.id.btnAdd);
-        Button btnDefineParams = findViewById(R.id.btnSetParam);
+    }
 
+    private void initializeData() {
         piece = new ArrayList<>();
         piece.add("Séjour");
         piece.add("Salle de bain");
@@ -46,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, piece);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerPiece.setAdapter(adapter);
+    }
 
+    private void setSpinnerListener() {
         spinnerPiece.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -63,22 +71,11 @@ public class MainActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+    }
 
-        btnAddRoom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ActivityRoom.class);
-                startActivityForResult(intent, REQUEST_CODE_ADD_ROOM);
-            }
-        });
-
-        btnDefineParams.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ActivityConsigne.class);
-                startActivityForResult(intent, REQUEST_CODE_SET_HUMIDITY);
-            }
-        });
+    private void setButtonListeners() {
+        findViewById(R.id.btnAdd).setOnClickListener(v -> startActivityForResult(new Intent(MainActivity.this, ActivityRoom.class), REQUEST_CODE_ADD_ROOM));
+        findViewById(R.id.btnSetParam).setOnClickListener(v -> startActivityForResult(new Intent(MainActivity.this, ActivityConsigne.class), REQUEST_CODE_SET_HUMIDITY));
     }
 
     @Override
