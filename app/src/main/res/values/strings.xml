@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="room_array">
+        <item>Séjour</item>
+        <item>Chambre</item>
+        <item>Salon</item>
+        <item>Cuisine</item>
+    </string-array>
+    <string name="app_name">DS2-2024</string>
+</resources>
