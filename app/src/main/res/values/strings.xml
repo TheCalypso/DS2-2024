@@ -7,4 +7,10 @@
     <string name="consigne">Consigne :</string>
     <string name="consigne_defaut">45.0</string>
     <string name="envoye">Envoyé</string>
+    <string name="nom_piece">Nom de la pièce</string>
+    <string name="ajouter_piece">AJOUTER CETTE PIÈCE</string>
+    <string name="saisir_nom_piece">Saisir le nom de la pièce :</string>
+    <string name="saisir_consigne_piece">Saisir la consigne pour la pièce :</string>
+    <string name="pourcent">%</string>
+    <string name="valider">VALIDER</string>
 </resources>
