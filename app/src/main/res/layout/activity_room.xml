@@ -6,45 +6,41 @@
     android:padding="16dp"
     tools:context=".ActivityRoom">
 
-    <!-- Title -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Régulation hygrométrique"
+        android:text="@string/regulation_hygrometrique"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="24dp"/>
 
-    <!-- Subtitle -->
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvTitle"
         android:layout_centerHorizontal="true"
-        android:text="Saisir le nom de la pièce :"
+        android:text="@string/saisir_nom_piece"
         android:textSize="16sp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- EditText for room name -->
     <EditText
         android:id="@+id/etRoomName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvSubtitle"
         android:layout_marginBottom="16dp"
-        android:hint="Nom de la pièce"/>
+        android:hint="@string/nom_piece"/>
 
-    <!-- Add Room Button -->
     <Button
         android:id="@+id/btnAddRoom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/etRoomName"
         android:layout_centerHorizontal="true"
-        android:text="AJOUTER CETTE PIÈCE"
+        android:text="@string/ajouter_piece"
         android:backgroundTint="@color/purple_500"
         android:textColor="@android:color/white"/>
 </RelativeLayout>
